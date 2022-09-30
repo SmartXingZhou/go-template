@@ -1,0 +1,35 @@
+version: "2.0"
+services:
+  # go server
+  golang:
+    environment:
+      - TZ=Asia/Shanghai
+    env_file:
+      - .env
+    # basic docker image
+    image: cosmtrek/air:v1.40.2
+    # docker container name
+    container_name: ${PROJECT_NAME}-golang-${DEV_USER}-${APP_PORT}
+    # work directory
+    working_dir: /go/src
+    # file system mount
+    volumes:
+      - ../..:/go/src
+    # run command
+    command:
+      - sh
+      - -c
+      - air -c .air.toml
+    # port binding,which binds the host port to the container port
+    ports:
+      - "${APP_PORT}:80"
+    extra_hosts:
+      # redirect requests to its own service to the local
+      - "template.com:127.0.0.1"
+    networks:
+      - default
+networks:
+  default:
+    # By default, the docker network named after the developer is used
+    # If it is not created locally by default, you can: docker network create ${DEV_USER}, where ${DEV_USER} corresponds to DEV_USER
+    name: ${USER_NAME}

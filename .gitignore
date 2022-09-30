@@ -1,0 +1,12 @@
+# docker
+docker/dev/.env
+
+# tmp
+tmp
+web/tmp
+cmd/tmp
+
+.idea/
+.vscode/
+.DS_Store
+vendor/
