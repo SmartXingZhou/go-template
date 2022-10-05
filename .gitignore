@@ -1,0 +1,16 @@
+# docker
+# Release the next line of comment
+# docker/dev/.env
+
+# tmp
+tmp
+web/tmp
+cmd/tmp
+
+# Release the next line of comment
+# .env
+
+.idea/
+.vscode/
+.DS_Store
+vendor/
