@@ -12,11 +12,11 @@ func init() {
 	// initialize project  e.g.
 	// 1.Check and get environment variable
 	// 2.Initialize database connection
+	// ...
 }
 
 func Run() {
 	// Hello world, the web server
-
 	helloHandler := func(w http.ResponseWriter, req *http.Request) {
 		_, err := io.WriteString(w, "Hello, world!\n")
 		if err != nil {

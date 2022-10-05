@@ -9,7 +9,13 @@ The purpose is to scientifically organize the code structure, ensure that the pr
 Referenced from the [Go Project Layout](https://github.com/golang-standards/project-layout) project.
 
 # Quick start
-`make dev`
+
+The basic premise：`go 1.18` `docker`.  
+Execute the following commands in sequence.
+
+1. `go mod init go-template`
+2. `go mod tidy`
+3. `make dev`
 
 # Structure introduction
 ## api

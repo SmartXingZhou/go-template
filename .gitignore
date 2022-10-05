@@ -1,10 +1,14 @@
 # docker
-docker/dev/.env
+# Release the next line of comment
+# docker/dev/.env
 
 # tmp
 tmp
 web/tmp
 cmd/tmp
+
+# Release the next line of comment
+# .env
 
 .idea/
 .vscode/
